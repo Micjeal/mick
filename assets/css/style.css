@@ -2651,20 +2651,38 @@ body.is-scrolled .site-header {
     height: 76px;
   }
   .main-nav {
-    display: none;
-    position: absolute;
-    top: 76px;
+    position: fixed;
+    top: 0;
     left: 0;
-    right: 0;
+    bottom: 0;
+    width: 280px;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-2);
     background: #fff;
-    border-bottom: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
     padding: var(--space-3);
+    transform: translateX(-100%);
+    transition: transform 0.3s var(--ease-out);
+    z-index: 1000;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.1);
   }
   .main-nav.is-open {
-    display: flex;
+    transform: translateX(0);
+  }
+  .main-nav::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s var(--ease-out);
+    z-index: -1;
+  }
+  .main-nav.is-open::before {
+    opacity: 1;
+    pointer-events: auto;
   }
   .nav-toggle {
     display: flex;
