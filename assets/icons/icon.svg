@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Mugisha Micheal app icon</title>
+  <desc id="desc">Dark green square app icon with a bright green M mark.</desc>
+  <rect width="512" height="512" rx="108" fill="#102817"/>
+  <path d="M120 350V152h58l78 126 78-126h58v198h-58V252l-57 90h-42l-57-90v98h-58z" fill="#83c928"/>
+  <path d="M92 392h328" stroke="#ffffff" stroke-width="22" stroke-linecap="round" opacity=".92"/>
+  <path d="M92 424h196" stroke="#83c928" stroke-width="22" stroke-linecap="round"/>
+</svg>
