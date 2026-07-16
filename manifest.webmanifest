@@ -1,0 +1,48 @@
+{
+  "id": "/",
+  "name": "Mugisha Micheal Portfolio",
+  "short_name": "Mugisha",
+  "description": "Portfolio for Mugisha Micheal, software engineer building secure web systems, dashboards, and AI-assisted products.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "background_color": "#ffffff",
+  "theme_color": "#102817",
+  "orientation": "any",
+  "categories": ["portfolio", "productivity", "business"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/maskable-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Case studies",
+      "short_name": "Work",
+      "url": "./projects.html",
+      "description": "View selected software projects."
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "url": "./contact.html",
+      "description": "Start a project conversation."
+    }
+  ]
+}

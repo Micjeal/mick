@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mugisha Micheal &mdash; Software Engineer & AI Builder</title>
   <meta name="description" content="Mugisha Micheal is a software engineer building secure web systems, dashboards, AI features, and production-ready digital products." />
+  <meta name="theme-color" content="#102817" />
+  <meta name="application-name" content="Mugisha Micheal" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Mugisha Micheal" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -145,6 +153,10 @@
                   I care about software that feels simple on the surface and disciplined underneath: readable interfaces,
                   clear data flow, responsive layouts, and code that leaves room for the next version.
                 </p>
+                <p>
+                  Based in Kampala, Uganda, I bring a unique perspective to every project—understanding both global
+                  best practices and local context. I believe great software should work anywhere, for anyone.
+                </p>
               </div>
 
               <div class="about-services" aria-label="Core strengths">
@@ -191,49 +203,90 @@
 
           <div class="services-shell">
             <div class="services-intro">
-              <h2>Focused services for building, improving, and launching useful software.</h2>
+              <h2>Client-ready websites, apps, and AI features built with practical delivery in mind.</h2>
               <p>
-                I work best where interface design, engineering, and practical business needs meet. The goal is simple:
-                define the right scope, build it clearly, and leave you with a system you understand.
+                Bring a rough idea, an outdated interface, or a workflow that needs automation. I shape it into a
+                clean build plan, then design and develop the pieces your clients or team will actually use.
               </p>
               <a href="#contact" class="btn btn-service">Start a project</a>
+
+              <div class="services-proof" aria-label="Service delivery highlights">
+                <div>
+                  <strong>2-4 wks</strong>
+                  <span>MVP launch window</span>
+                </div>
+                <div>
+                  <strong>24h</strong>
+                  <span>Typical response time</span>
+                </div>
+              </div>
             </div>
 
             <div class="services-list" aria-label="Services offered">
               <article class="service-item">
-                <div class="service-index">01</div>
-                <div>
+                <div class="service-card-head">
+                  <span class="service-index">01</span>
+                  <span class="service-icon" aria-hidden="true">W</span>
+                </div>
+                <div class="service-content">
                   <h3>Portfolio and business websites</h3>
                   <p>Fast, responsive websites with strong visuals, clear messaging, and layouts built for conversion.</p>
+                  <div class="service-tags" aria-label="Website deliverables">
+                    <span>Brand presence</span>
+                    <span>Landing pages</span>
+                    <span>SEO setup</span>
+                  </div>
                 </div>
-                <a href="#contact" aria-label="Ask about portfolio and business websites">+</a>
+                <a href="#contact" aria-label="Ask about portfolio and business websites"><span aria-hidden="true">+</span></a>
               </article>
 
               <article class="service-item">
-                <div class="service-index">02</div>
-                <div>
+                <div class="service-card-head">
+                  <span class="service-index">02</span>
+                  <span class="service-icon" aria-hidden="true">A</span>
+                </div>
+                <div class="service-content">
                   <h3>Web application development</h3>
                   <p>Dashboards, internal tools, admin panels, and product interfaces with clean frontend structure.</p>
+                  <div class="service-tags" aria-label="Application deliverables">
+                    <span>Dashboards</span>
+                    <span>Admin panels</span>
+                  </div>
                 </div>
-                <a href="#contact" aria-label="Ask about web application development">+</a>
+                <a href="#contact" aria-label="Ask about web application development"><span aria-hidden="true">+</span></a>
               </article>
 
               <article class="service-item">
-                <div class="service-index">03</div>
-                <div>
+                <div class="service-card-head">
+                  <span class="service-index">03</span>
+                  <span class="service-icon" aria-hidden="true">AI</span>
+                </div>
+                <div class="service-content">
                   <h3>AI-powered product features</h3>
                   <p>Task-focused AI workflows for automation, content support, assistants, and internal operations.</p>
+                  <div class="service-tags" aria-label="AI feature deliverables">
+                    <span>Assistants</span>
+                    <span>Automation</span>
+                  </div>
                 </div>
-                <a href="#contact" aria-label="Ask about AI-powered product features">+</a>
+                <a href="#contact" aria-label="Ask about AI-powered product features"><span aria-hidden="true">+</span></a>
               </article>
 
               <article class="service-item">
-                <div class="service-index">04</div>
-                <div>
+                <div class="service-card-head">
+                  <span class="service-index">04</span>
+                  <span class="service-icon" aria-hidden="true">R</span>
+                </div>
+                <div class="service-content">
                   <h3>System cleanup and redesign</h3>
                   <p>Interface upgrades, responsive fixes, code organization, and practical improvements to existing projects.</p>
+                  <div class="service-tags" aria-label="Redesign deliverables">
+                    <span>UI refresh</span>
+                    <span>Responsive fixes</span>
+                    <span>Code cleanup</span>
+                  </div>
                 </div>
-                <a href="#contact" aria-label="Ask about system cleanup and redesign">+</a>
+                <a href="#contact" aria-label="Ask about system cleanup and redesign"><span aria-hidden="true">+</span></a>
               </article>
             </div>
           </div>
@@ -241,14 +294,14 @@
           <div class="services-support">
             <div class="service-note">
               <span>How I work</span>
-              <strong>Understand the goal, shape the system, then build the smallest version that is worth shipping.</strong>
+              <strong>Understand the business goal, map the user journey, then ship a focused version you can grow from.</strong>
             </div>
             <div class="service-steps">
-              <span>Discovery</span>
-              <span>Design direction</span>
-              <span>Build</span>
-              <span>Review</span>
-              <span>Launch</span>
+              <span><strong>Discovery</strong><small>Goals and users</small></span>
+              <span><strong>Direction</strong><small>Visual system</small></span>
+              <span><strong>Build</strong><small>Frontend and logic</small></span>
+              <span><strong>Review</strong><small>Fixes and polish</small></span>
+              <span><strong>Launch</strong><small>Handoff support</small></span>
             </div>
           </div>
         </section>
@@ -299,75 +352,162 @@
                 <span></span>
                 Case studies
               </div>
-              <h2>Systems built around roles, data, security, and the real work users need to finish.</h2>
+              <h2>Selected systems with clear workflows, secure roles, and interfaces people can actually use.</h2>
             </div>
-            <p>Selected builds from healthcare, finance, AI, operations, product tools, and data workflows.</p>
+            <p>Each project shows how I think through a real business problem: who uses it, what data matters, and how the interface should guide the work.</p>
           </div>
 
           <article class="case-study-card">
             <div class="case-study-copy">
-              <span>Final year project</span>
-              <h3>Next-Gen Banking System</h3>
-              <p>A banking application with customer and admin panels, a blockchain transaction viewer, and fraud detection workflows.</p>
+              <span>Featured case study / Finance</span>
+              <h3>Secure banking workflow with fraud review and audit visibility.</h3>
+              <p>Customer and admin panels shaped into one readable system: account activity, transaction checks, fraud review, and an audit trail that makes financial operations easier to explain.</p>
+              <div class="case-study-actions">
+                <a href="project-banking.html" class="btn btn-case-study">View case study</a>
+                <a href="#contact" class="case-study-link">Build something similar</a>
+              </div>
+              <div class="case-study-stats" aria-label="Banking system highlights">
+                <div><strong>3</strong><span>Role views</span></div>
+                <div><strong>47.2M</strong><span>Sample flow</span></div>
+                <div><strong>24h</strong><span>Review window</span></div>
+              </div>
             </div>
-            <div class="case-study-spec">
-              <div>
-                <span>Stack</span>
-                <strong>HTML, CSS, JS, Node.js, MySQL</strong>
+
+            <div class="case-study-panel" aria-label="Next-Gen Banking System highlights">
+              <div class="case-study-screen" aria-hidden="true">
+                <div class="screen-chrome">
+                  <span></span><span></span><span></span>
+                  <strong>banking-console.local</strong>
+                </div>
+                <div class="screen-workspace">
+                  <div class="screen-sidebar">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="screen-main">
+                    <div class="screen-topline">
+                      <span>Transaction flow</span>
+                      <strong>Live audit</strong>
+                    </div>
+                    <div class="screen-balance">
+                      <span>Reviewed value</span>
+                      <strong>UGX 47.2M</strong>
+                    </div>
+                    <div class="screen-chart">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="screen-table">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-status">
+                  <span>Customer panel</span>
+                  <span>Fraud review</span>
+                  <span>Admin control</span>
+                </div>
               </div>
-              <div>
-                <span>Focus</span>
-                <strong>Transaction visibility, role access, fraud checks</strong>
-              </div>
-              <div>
-                <span>Domain</span>
-                <strong>Finance and security</strong>
+
+              <div class="case-study-spec">
+                <div>
+                  <span>Stack</span>
+                  <strong>HTML, CSS, JavaScript, Node.js, MySQL</strong>
+                </div>
+                <div>
+                  <span>Core flow</span>
+                  <strong>Role access, transaction review, fraud checks</strong>
+                </div>
+                <div>
+                  <span>Result</span>
+                  <strong>A finance workflow that is easier to inspect and explain</strong>
+                </div>
               </div>
             </div>
           </article>
 
-          <div class="project-list">
+          <div class="project-list" aria-label="Selected project case studies">
             <article>
+              <div class="project-thumb project-thumb--health" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
               <span>Healthcare</span>
               <h3>Hospital Management System</h3>
               <p>Multi-role dashboards, inventory management, and blood bank tracking.</p>
-              <strong>React.js / Tailwind CSS / Node.js / MySQL</strong>
+              <div class="project-meta">
+                <strong>React.js / Tailwind CSS / Node.js / MySQL</strong>
+                <a href="project-hms.html">View case study</a>
+              </div>
             </article>
             <article>
+              <div class="project-thumb project-thumb--ai" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
               <span>AI</span>
               <h3>Deepfake Detection SaaS</h3>
               <p>Platform concept for detecting manipulated media content with AI-backed analysis.</p>
-              <strong>Python / TensorFlow / Flask / React</strong>
+              <div class="project-meta">
+                <strong>Python / TensorFlow / Flask / React</strong>
+                <a href="project-deepfake.html">View case study</a>
+              </div>
             </article>
             <article>
+              <div class="project-thumb project-thumb--canvas" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
               <span>Product</span>
               <h3>Figma-Lite Drawing App</h3>
               <p>Browser drawing workspace with canvas tools, layers, and interface controls.</p>
-              <strong>HTML5 Canvas / CSS3 / JavaScript</strong>
+              <div class="project-meta">
+                <strong>HTML5 Canvas / CSS3 / JavaScript</strong>
+                <a href="projects.html">View project</a>
+              </div>
             </article>
             <article>
+              <div class="project-thumb project-thumb--ops" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
               <span>Operations</span>
               <h3>Volunteer Management System</h3>
               <p>Approval workflows and activity tracking for volunteer coordination.</p>
-              <strong>JavaScript / Firebase / Material UI</strong>
+              <div class="project-meta">
+                <strong>JavaScript / Firebase / Material UI</strong>
+                <a href="projects.html">View project</a>
+              </div>
             </article>
             <article>
+              <div class="project-thumb project-thumb--data" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
               <span>Data</span>
               <h3>Reporting System</h3>
               <p>Sales reporting system with a typed frontend and database-backed reporting flow.</p>
-              <strong>TypeScript / CSS / PLpgSQL / JavaScript</strong>
+              <div class="project-meta">
+                <strong>TypeScript / CSS / PLpgSQL / JavaScript</strong>
+                <a href="https://github.com/Micjeal/Reporting-system" target="_blank" rel="noopener">View GitHub</a>
+              </div>
             </article>
             <article>
+              <div class="project-thumb project-thumb--commerce" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
               <span>Commerce</span>
               <h3>Real-Time POS Inventory</h3>
               <p>Point-of-sale and inventory workflow for tracking commercial operations.</p>
-              <strong>PHP / JavaScript / CSS</strong>
+              <div class="project-meta">
+                <strong>PHP / JavaScript / CSS</strong>
+                <a href="https://github.com/Micjeal/REAL-TIME-POS-INVENTORY" target="_blank" rel="noopener">View GitHub</a>
+              </div>
             </article>
             <article>
+              <div class="project-thumb project-thumb--security" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
               <span>Security</span>
               <h3>Secure Tracker</h3>
               <p>Forensic tracker concept focused on custody, traceability, and secure records.</p>
-              <strong>Dart / PLpgSQL / Kotlin</strong>
+              <div class="project-meta">
+                <strong>Dart / PLpgSQL / Kotlin</strong>
+                <a href="projects.html">View project</a>
+              </div>
             </article>
           </div>
         </section>
