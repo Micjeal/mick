@@ -273,7 +273,7 @@ function initFaqAccordion() {
    Feeds mouse position into CSS custom properties for restrained depth.
    ============================================================ */
 function initPointerPanels() {
-  const panels = document.querySelectorAll('.case-study-card, .contact-panel-v2, .service-item');
+  const panels = document.querySelectorAll('.contact-panel-v2, .service-item');
   if (!panels.length || window.matchMedia('(pointer: coarse)').matches) return;
 
   panels.forEach((panel) => {
@@ -291,7 +291,47 @@ function initPointerPanels() {
 }
 
 /* ============================================================
-   MODULE 9: Browser chrome
+   MODULE 9: Installable app support
+   Registers the service worker required for install prompts and
+   offline fallback on browsers that support PWAs. Also handles
+   the install prompt UI.
+   ============================================================ */
+function initInstallableApp() {
+  if (!('serviceWorker' in navigator) || !window.isSecureContext) return;
+
+  let deferredPrompt = null;
+  const installButton = document.createElement('button');
+  installButton.className = 'install-prompt-btn';
+  installButton.textContent = 'Install App';
+  installButton.style.cssText = 'position: fixed; bottom: 20px; right: 20px; padding: 12px 24px; background: #102817; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; z-index: 1000; display: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15);';
+  document.body.appendChild(installButton);
+
+  window.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    deferredPrompt = event;
+    installButton.style.display = 'block';
+  });
+
+  installButton.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    installButton.style.display = 'none';
+  });
+
+  window.addEventListener('appinstalled', () => {
+    deferredPrompt = null;
+    installButton.style.display = 'none';
+  });
+
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+
+/* ============================================================
+   MODULE 10: Browser chrome
    Turns the decorative frame into a small, usable browser simulator.
    ============================================================ */
 function initBrowserChrome() {
@@ -580,6 +620,7 @@ function initBrowserChrome() {
 function init() {
   initBrowserChrome();
   initNavToggle();
+  initInstallableApp();
   initEntranceAnimation();
   initPanelParallax();
   initSectionReveal();
