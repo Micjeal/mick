@@ -348,8 +348,10 @@ function initBrowserChrome() {
 
   if (!shell || !tabsList || !newTabButton || !addressForm || !addressInput) return;
 
-  const HOME_URL = 'mugishamicheal.com';
-  const HOME_TITLE = 'Mugisha Micheal - Portfolio';
+  const ORIGINAL_TITLE = document.title;
+  const initialTabLabel = tabsList.querySelector('.browser-tab span:first-child');
+  const HOME_URL = addressInput.value.trim() || 'mugishamicheal.com';
+  const HOME_TITLE = (initialTabLabel && initialTabLabel.textContent.trim()) || 'Mugisha Micheal - Portfolio';
   let nextTabId = 1;
   let activeTabId = 'home';
 
@@ -462,7 +464,7 @@ function initBrowserChrome() {
 
     addressInput.value = activeTab.url;
     document.title = activeTab.title === HOME_TITLE
-      ? 'Mugisha Micheal - Software Engineer & AI Builder'
+      ? ORIGINAL_TITLE
       : `${activeTab.title} | Browser preview`;
 
     if (backButton) backButton.disabled = activeTab.historyIndex <= 0;

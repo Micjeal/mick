@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mugisha-portfolio-v2';
+const CACHE_NAME = 'mugisha-portfolio-v3';
 
 const CORE_ASSETS = [
   './',
