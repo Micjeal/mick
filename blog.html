@@ -16,7 +16,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="browser-shell"><div class="site-window">
+  <div class="browser-shell">
+    <div class="browser-chrome" data-browser-chrome>
+      <div class="window-dots" aria-label="Window controls">
+        <button type="button" class="window-dot window-dot-close" data-window-action="close" aria-label="Close active tab"></button>
+        <button type="button" class="window-dot window-dot-minimize" data-window-action="minimize" aria-label="Minimize browser frame"></button>
+        <button type="button" class="window-dot window-dot-maximize" data-window-action="maximize" aria-label="Maximize browser frame"></button>
+      </div>
+      <div class="browser-tabs" data-browser-tabs role="tablist" aria-label="Browser tabs">
+        <button type="button" class="browser-tab is-active" data-tab-id="home" role="tab" aria-selected="true">
+          <span>Articles - Mugisha Micheal</span>
+          <span class="tab-close" aria-hidden="true">x</span>
+        </button>
+      </div>
+      <button type="button" class="browser-plus" data-new-tab aria-label="Open new tab">+</button>
+    </div>
+    <div class="browser-address">
+      <button type="button" class="browser-control" data-browser-back aria-label="Go back">&larr;</button>
+      <button type="button" class="browser-control" data-browser-forward aria-label="Go forward">&rarr;</button>
+      <button type="button" class="browser-control" data-browser-refresh aria-label="Refresh current tab">&#8635;</button>
+      <form class="address-form" data-address-form role="search">
+        <label class="sr-only" for="browser-address-input">Search or enter website</label>
+        <input id="browser-address-input" class="address-pill" data-address-input type="search" value="mugishamicheal.com/articles" autocomplete="off" spellcheck="false" />
+      </form>
+      <button type="button" class="browser-menu" data-browser-menu aria-label="Browser menu">...</button>
+    </div>
+    <div class="site-window">
     <header class="site-header"><div class="nav-wrap"><a href="index.html" class="logo"><span class="logo-mark" aria-hidden="true"></span>Mugisha Micheal</a><nav class="main-nav" id="main-nav"><a href="about.html">About</a><a href="index.html#services">Services</a><a href="projects.html">Case Studies</a><a href="blog.html">Articles</a></nav><div class="nav-actions"><a href="contact.html" class="btn btn-pill-dark">Contact Us</a><button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header>
     <main class="page-main">
       <section class="page-hero"><div><div class="section-kicker"><span></span>Articles</div><h1>Notes from systems, security, and AI product work.</h1></div><p>Short writing topics that can become full articles as the portfolio grows.</p></section>
@@ -32,7 +57,7 @@
           <article class="page-card"><span>System architecture</span><h3>Building for scale</h3><p>Patterns and practices for creating systems that grow. From database design to API architecture, I share what works in production.</p></article>
           <article class="page-card"><span>Security</span><h3>Secure by design</h3><p>Security isn't a feature—it's a foundation. I write about authentication, authorization, and building systems that protect users.</p></article>
           <article class="page-card"><span>AI integration</span><h3>Practical AI</h3><p>How to actually use AI in real products. Moving beyond hype to implement useful AI features that solve real problems.</p></article>
-          <article class="page-card"><span>African tech</span><h3>Local context</span><h3>Building for Africa</h3><p>Insights from building technology in African markets. Understanding local needs, constraints, and opportunities for innovation.</p></article>
+          <article class="page-card"><span>African tech</span><h3>Building for Africa</h3><p>Insights from building technology in African markets. Understanding local needs, constraints, and opportunities for innovation.</p></article>
         </div>
       </section>
       <section class="page-cta"><div><h2>Have a topic or project to explore?</h2><p>I write best from real systems and real constraints.</p></div><a href="contact.html" class="btn btn-pill-light">Get in touch</a></section>
