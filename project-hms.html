@@ -16,11 +16,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="browser-shell"><div class="site-window">
+  <div class="browser-shell">
+    <div class="browser-chrome" data-browser-chrome>
+      <div class="window-dots" aria-label="Window controls">
+        <button type="button" class="window-dot window-dot-close" data-window-action="close" aria-label="Close active tab"></button>
+        <button type="button" class="window-dot window-dot-minimize" data-window-action="minimize" aria-label="Minimize browser frame"></button>
+        <button type="button" class="window-dot window-dot-maximize" data-window-action="maximize" aria-label="Maximize browser frame"></button>
+      </div>
+      <div class="browser-tabs" data-browser-tabs role="tablist" aria-label="Browser tabs">
+        <button type="button" class="browser-tab is-active" data-tab-id="home" role="tab" aria-selected="true">
+          <span>Hospital Management System</span>
+          <span class="tab-close" aria-hidden="true">x</span>
+        </button>
+      </div>
+      <button type="button" class="browser-plus" data-new-tab aria-label="Open new tab">+</button>
+    </div>
+    <div class="browser-address">
+      <button type="button" class="browser-control" data-browser-back aria-label="Go back">&larr;</button>
+      <button type="button" class="browser-control" data-browser-forward aria-label="Go forward">&rarr;</button>
+      <button type="button" class="browser-control" data-browser-refresh aria-label="Refresh current tab">&#8635;</button>
+      <form class="address-form" data-address-form role="search">
+        <label class="sr-only" for="browser-address-input">Search or enter website</label>
+        <input id="browser-address-input" class="address-pill" data-address-input type="search" value="mugishamicheal.com/projects/hms" autocomplete="off" spellcheck="false" />
+      </form>
+      <button type="button" class="browser-menu" data-browser-menu aria-label="Browser menu">...</button>
+    </div>
+    <div class="site-window">
     <header class="site-header"><div class="nav-wrap"><a href="index.html" class="logo"><span class="logo-mark" aria-hidden="true"></span>Mugisha Micheal</a><nav class="main-nav" id="main-nav"><a href="about.html">About</a><a href="index.html#services">Services</a><a href="projects.html">Case Studies</a><a href="blog.html">Articles</a></nav><div class="nav-actions"><a href="contact.html" class="btn btn-pill-dark">Contact Us</a><button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header>
     <main class="page-main">
       <section class="page-hero"><div><div class="section-kicker"><span></span>Healthcare case study</div><h1>Hospital Management System</h1></div><p>Multi-role dashboards, inventory management, and blood bank tracking for hospital operations.</p></section>
       <section class="detail-panel"><div><h2>System focus.</h2><p class="page-intro">The goal was to organize hospital workflows into clear role-based interfaces with practical data handling and fast access to operational records.</p></div><ul><li>React.js and Tailwind CSS interface</li><li>Node.js and MySQL backend direction</li><li>Role-based dashboard patterns</li><li>Inventory and blood bank workflows</li></ul></section>
+      <section class="page-section">
+        <h2>Highlights.</h2>
+        <div class="page-grid">
+          <article class="page-card"><span>Access</span><h3>Role-based dashboards</h3><p>Separate views for admins, clinical staff, and operations keep each workflow focused and reduce accidental exposure of sensitive records.</p></article>
+          <article class="page-card"><span>Operations</span><h3>Inventory &amp; blood bank</h3><p>Stock levels and blood units are tracked in one place, with fast access to the records that day-to-day hospital work depends on.</p></article>
+          <article class="page-card"><span>Clarity</span><h3>Built around real tasks</h3><p>Screens are organized around the jobs people actually do, so the system stays legible, quick to navigate, and easy to audit.</p></article>
+        </div>
+      </section>
       <section class="page-cta"><div><h2>Need a healthcare or operations dashboard?</h2><p>I can help shape the workflow and build a clean system around it.</p></div><a href="contact.html" class="btn btn-pill-light">Start a project</a></section>
     </main>
     <footer class="site-footer"><div class="footer-brand"><strong>Mugisha Micheal</strong><p>Software engineer focused on secure web systems, dashboards, and AI-assisted products.</p></div><nav aria-label="Footer navigation"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav><p>&copy; 2026 Mugisha Micheal. All rights reserved.</p></footer>
